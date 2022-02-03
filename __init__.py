@@ -19,35 +19,27 @@ consoles = []
 startupHTML="""
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .container {
-                width: 90em;
-                overflow-x: auto;
-                white-space: nowrap;
-                height: 50em;
-            }
-            textarea{
-                height: 500px;
-                width: 95%;
-                
-            }
-            p {
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <table>
-                <thead>
-                    THREQAD_CONTAIN
-                </thead>
-                
-            </table>
-        </div>
-    </body>
+<head>
+<style>
+.container {
+width: 90em;
+overflow-x: auto;
+whte-space: nowrap;
+height: 50em;
+}
+textarea{
+height: 500px;
+width: 95%;
+}
+p {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container"><table><thead>THREQAD_CONTAIN</thead></table></div>
+</body>
 </html>
 """
 templateDiv = '''
