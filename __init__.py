@@ -2,6 +2,7 @@
 from concurrent.futures import thread
 from tkinter import *
 from flask import Flask
+import flask
 from subprocess import Popen
 from datetime import datetime
 import logging
@@ -13,35 +14,6 @@ class LogType(Enum):
     INFORMATION =2
     ERROR =3 
 consoles = []
-startupHTML="""
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            .container {width: 90em;overflow-x: auto;white-space: nowrap;height: 100%;} textarea{height: 500px;width: 95%;} p {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;}
-        </style>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script>
-        
-            function timeout(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-            var url = "consoles";
-            async function main(){
-                while(true){
-                    $.get(url, function (data) { 
-                        document.querySelector("body").innerHTML= data
-                    }); 
-                    await timeout([tm])
-                }
-            }
-            main()
-        </script>
-    </head>
-    <body>
-        Loading.. (Make sure javascript is enabled.)
-    </body></html>
-"""
 templateDiv = '''
 <div><p style="text-align:left;">[dt]<span style="float:right; padding-right: 10px; color:[cl]">[st]</span></p><hr><textarea readonly>[da]</textarea></div><br>
 '''
@@ -70,7 +42,7 @@ def startServer(port,delay):
     app = Flask(__name__)
     @app.route('/')
     def home():
-        return startupHTML.replace("[tm]",str(delay))
+        return flask.render_template("startupHTML.HTML").replace("[tm]",str(delay))
     @app.route('/consoles')
     def getConsoles():
         return calculateConsolesHTML()

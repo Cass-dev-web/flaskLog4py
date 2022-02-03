@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {width: 90em;overflow-x: auto;white-space: nowrap;height: 100%;} textarea{height: 500px;width: 95%;} p {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;}
+        </style>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+        
+            function timeout(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            var url = "consoles";
+            async function main(){
+                while(true){
+                    $.get(url, function (data) { 
+                        document.querySelector("body").innerHTML= data
+                    }); 
+                    await timeout([tm])
+                }
+            }
+            main()
+        </script>
+    </head>
+    <body>
+        Loading.. (Make sure javascript is enabled.)
+    </body></html>
