@@ -1,7 +1,3 @@
-# credentials
-api_key = ""
-
-#############
 # imports
 from concurrent.futures import thread
 from tkinter import *
