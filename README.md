@@ -23,7 +23,7 @@ def thr():
   flaskLog4py.changeStatus(console_1,"ended","red") 
 x = threading.Thread(target=thr)
 x.start()
-flaskLog4py.startServer(3000)
+flaskLog4py.startServer(3000,2500)
 ```
 Then, once ran, go on: `localhost:3000`
 
