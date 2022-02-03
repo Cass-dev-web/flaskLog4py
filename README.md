@@ -1,17 +1,13 @@
 
 # flaskLog4py
-
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/ParentProfanities/flaskLog4py/blob/master/LICENSE)
+[![Free Cookies](https://img.shields.io/badge/free-cookies-green)](https://letmegooglethat.com/?q=Cookie+Clicker)
+  
 A easy to use flask-driven python thread logger. Not the best of it's market but useful if nothing else is applicable.
 
-## To-Do
-
-- Not having to reload the page to see changes **[HIGH PRIORITY]**  
-
-and other stuff...
 ## Authors
 
 - [@ParentProfanities](https://github.com/ParentProfanities)
-
 
 ## Usage/Examples
 
@@ -27,7 +23,7 @@ def thr():
   flaskLog4py.changeStatus(console_1,"ended","red") 
 x = threading.Thread(target=thr)
 x.start()
-flaskLog4py.startServer(3000)
+flaskLog4py.startServer(3000,2500)
 ```
 Then, once ran, go on: `localhost:3000`
 
