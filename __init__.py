@@ -32,8 +32,7 @@ startupHTML="""
                     $.get(url, function (data) { 
                         document.querySelector("body").innerHTML= data
                     }); 
-                    
-                    await timeout(1000)
+                    await timeout([tm]])
                 }
             }
             main()
@@ -65,13 +64,13 @@ def calculateConsolesHTML():
             consoleline=consoleline+line+"\n"
         consoles_parsed=consoles_parsed+(templateDiv.replace("[dt]",consoleElement[0]).replace("[da]",consoleline).replace("[st]",consoleElement[2][0]).replace("[cl]",consoleElement[2][1]))
     return consoles_parsed
-def startServer(port):
+def startServer(port,delay):
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.ERROR)
     app = Flask(__name__)
     @app.route('/')
     def home():
-        return startupHTML
+        return startupHTML.repalce("[tm]",delay)
     @app.route('/consoles')
     def getConsoles():
         return '<div class="container"><table><thead>'+ calculateConsolesHTML()+'</thead></table></div>'
