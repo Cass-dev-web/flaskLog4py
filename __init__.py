@@ -18,7 +18,7 @@ startupHTML="""
 <html>
     <head>
         <style>
-            .container {width: 90em;overflow-x: auto;white-space: nowrap;height: 50em;} textarea{height: 500px;width: 95%;} p {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;}
+            .container {width: 90em;overflow-x: auto;white-space: nowrap;height: 100%;} textarea{height: 500px;width: 95%;} p {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;}
         </style>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -32,7 +32,7 @@ startupHTML="""
                     $.get(url, function (data) { 
                         document.querySelector("body").innerHTML= data
                     }); 
-                    await timeout([tm]])
+                    await timeout([tm])
                 }
             }
             main()
@@ -70,8 +70,8 @@ def startServer(port,delay):
     app = Flask(__name__)
     @app.route('/')
     def home():
-        return startupHTML.repalce("[tm]",delay)
+        return startupHTML.replace("[tm]",str(delay))
     @app.route('/consoles')
     def getConsoles():
-        return '<div class="container"><table><thead>'+ calculateConsolesHTML()+'</thead></table></div>'
+        return calculateConsolesHTML()
     app.run(port=port, debug=False)
