@@ -3,15 +3,9 @@
 
 A easy to use flask-driven python thread logger. Not the best of it's market but useful if nothing else is applicable.
 
-## To-Do
-
-- Not having to reload the page to see changes **[HIGH PRIORITY]**  
-
-and other stuff...
 ## Authors
 
 - [@ParentProfanities](https://github.com/ParentProfanities)
-
 
 ## Usage/Examples
 
