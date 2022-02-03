@@ -1,6 +1,8 @@
 
 # flaskLog4py
-
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/ParentProfanities/flaskLog4py/blob/master/LICENSE)
+![Free Cookies](https://img.shields.io/badge/free-cookies-green)
+  
 A easy to use flask-driven python thread logger. Not the best of it's market but useful if nothing else is applicable.
 
 ## Authors
