@@ -1,5 +1,7 @@
 # imports
 from tkinter import *
+from tracemalloc import start
+from turtle import delay
 from flask import Flask
 import flask
 from datetime import datetime
@@ -35,9 +37,8 @@ def calculateConsolesHTML():
         consoles_parsed=consoles_parsed+(templateDiv.replace("[dt]",consoleElement[0]).replace("[da]",consoleline).replace("[st]",consoleElement[2][0]).replace("[cl]",consoleElement[2][1]))
     return consoles_parsed
 def startServer(port,delay,ip,debugMode):
-    if debugMode ==False: 
-        log = logging.getLogger('werkzeug')
-        log.setLevel(logging.ERROR)
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
     app = Flask(__name__)
     @app.route('/')
     def home():
@@ -45,6 +46,6 @@ def startServer(port,delay,ip,debugMode):
     @app.route('/consoles')
     def getConsoles():
         return calculateConsolesHTML()
-    if ip==None:
+    if ip == None:
         ip="127.0.0.1"
-    app.run(port=port, host=ip, debug=debugMode)
+    app.run(host=ip, port=port, debug=False)
