@@ -34,9 +34,10 @@ def calculateConsolesHTML():
             consoleline=consoleline+line+"\n"
         consoles_parsed=consoles_parsed+(templateDiv.replace("[dt]",consoleElement[0]).replace("[da]",consoleline).replace("[st]",consoleElement[2][0]).replace("[cl]",consoleElement[2][1]))
     return consoles_parsed
-def startServer(port,delay,ip):
-    log = logging.getLogger('werkzeug')
-    log.setLevel(logging.ERROR)
+def startServer(port,delay,ip,debugMode):
+    if debugMode ==False: 
+        log = logging.getLogger('werkzeug')
+        log.setLevel(logging.ERROR)
     app = Flask(__name__)
     @app.route('/')
     def home():
@@ -46,4 +47,4 @@ def startServer(port,delay,ip):
         return calculateConsolesHTML()
     if ip==None:
         ip="127.0.0.1"
-    app.run(port=port, host=ip, debug=False)
+    app.run(port=port, host=ip, debug=debugMode)
