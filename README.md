@@ -45,7 +45,7 @@ We recommend you use [htmlcolorcodes.com](https://htmlcolorcodes.com/).
 
 | Function             | Syntax | Returns | Description
 | ----------------- | ---------- |---------- | ----------
-|startServer|`startServer(port, delay)`| Null |Starts the server to a dedicated port and with a dedicated delay between refreshes.
+|startServer|`startServer(port, delay, ip[SET TO None FOR LOCALHOST])`| Null |Starts the server to a dedicated port and with a dedicated delay between refreshes. If IP is set to `None`, it will start the server on 127.0.0.1 (`localhost`).
 |newConsole|`newConsole(threadName)`|Console ID|Creates a new logging area using a name and then returns a console ID to be used for functions such as `changeStatus` and `addLine`.
 |addLine|`addLine(consoleID, message, type)`| Null | Adds output line to a designated console/logging area. Refer to logging types.
 |changeStatus|`changeStatus(consoleID, text, color)`| Null | Changes the text next to the console name, for example: "Verifying request...", "Getting API status..." etc. Refer to the colors section.
