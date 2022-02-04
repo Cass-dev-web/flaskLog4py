@@ -55,8 +55,8 @@ We recommend you use [htmlcolorcodes.com](https://htmlcolorcodes.com/).
 |----------------------------|------------------------------------------------------|
 | tkinter (Tkinter for py 2) | pip install tk                                       |
 | flask                      | [pip install flask](https://pypi.org/project/Flask/) |
-| enum                       | pip install enum                                     |
-| DateTime                   | pip install DateTime                                 |
+| enum                       | [pip install enum](https://pypi.org/project/enum/)                                  |
+| DateTime                   | [pip install DateTime](https://pypi.org/project/DateTime/)                           |
 | Logging                    | *N/A*                                                |
 
 ## Optimisations
