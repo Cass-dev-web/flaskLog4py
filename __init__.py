@@ -1,9 +1,7 @@
 # imports
-from concurrent.futures import thread
 from tkinter import *
 from flask import Flask
 import flask
-from subprocess import Popen
 from datetime import datetime
 import logging
 from enum import Enum
