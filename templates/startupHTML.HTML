@@ -14,14 +14,18 @@
             async function main(){
                 while(true){
                     var req = $.get(url, function (data) { 
-                        document.querySelector("body").innerHTML= data
+                        if(data!=""){
+                            document.querySelector("body").innerHTML= data
+                        }else{
+                            documemt.querySelector("body").immerHTML='<p>Cannot find any consoles to display!</p><p class="small">If you think this is an error, report it at <a href="https://github.com/ParentProfanities/flaskLog4py/issues">our github</a>. This page will automatically change if it finds any consoles to display.</p>'
+                        }
                     }); 
                     req.error(function(jqXHR, textStatus, errorThrown) {
                         if (textStatus == 'timeout')
                             document.querySelector("body").innerHTML=`<p>Server timeout.</p>`
 
                         if (textStatus == 'error')
-                            document.querySelector("body").innerHTML=`<p>Cannot find consoles!</p><p class="small">If you think this is an error, report it at <a href="https://github.com/ParentProfanities/flaskLog4py/issues">our github</a>. This page will automatically change if it finds any consoles to display.</p>`
+                            document.querySelector("body").innerHTML=`<p>Cannot find server!</p><p class="small">If you think this is an error, report it at <a href="https://github.com/ParentProfanities/flaskLog4py/issues">our github</a>. This page will automatically change if it finds any consoles to display.</p>`
                             return
 
                     });
