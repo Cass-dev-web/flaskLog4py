@@ -49,6 +49,7 @@ We recommend you use [htmlcolorcodes.com](https://htmlcolorcodes.com/).
 |newConsole|`newConsole(threadName)`|Console ID|Creates a new logging area using a name and then returns a console ID to be used for functions such as `changeStatus` and `addLine`.
 |addLine|`addLine(consoleID, message, type)`| Null | Adds output line to a designated console/logging area. Refer to logging types.
 |changeStatus|`changeStatus(consoleID, text, color)`| Null | Changes the text next to the console name, for example: "Verifying request...", "Getting API status..." etc. Refer to the colors section.
+|renameConsole|`renameConsole(consoleID, name)`| Null | Changes the name of a designated console.
 
 ## Dependencies
 
