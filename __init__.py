@@ -27,6 +27,8 @@ def addLine(consoleNum, line, type):
 def changeStatus(consoleNum,text,color):
   consoles[consoleNum][2][0]=text
   consoles[consoleNum][2][1]=color
+def renameConsole(consoleNum,name):
+  consoles[consoleNum][0]=name
 ##########################################################################################################################################################################\
 def calculateConsolesHTML():
     consoles_parsed =""
