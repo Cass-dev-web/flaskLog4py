@@ -62,7 +62,7 @@ We recommend you use [htmlcolorcodes.com](https://htmlcolorcodes.com/).
 | Logging                    | *N/A*                                                |
 ## How it works
 
-When doing startServer(...), it creates a new flask app and starts running it either locally or on a dedicated and specified IP adress and port. Then, you're able to access that, it will most likely say that it cannot find any consoles to display, to display a console, you need to create one. You can do that by doing newConsole(...), which will return and ID, then, on the website, it's javascript code keeps checking for new consoles dynamically. That means that when stopping your code and restarting it, you won't have to refresh the tab. Then with the console ID, you can add a line or change a threads status and status color. One think we may have planned for the future is renaming the thread. You can find more details in the code.
+When doing startServer(...), it creates a new flask app and starts running it either locally or on a dedicated and specified IP adress and port. Then, you're able to access that, it will most likely say that it cannot find any consoles to display, to display a console, you need to create one. You can do that by doing newConsole(...), which will return and ID, then, on the website, it's javascript code keeps checking for new consoles dynamically. That means that when stopping your code and restarting it, you won't have to refresh the tab. Then with the console ID, you can add a line or change a threads status and status color. You can find more details in the code.
 
 ## Optimisations
 
